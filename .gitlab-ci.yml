@@ -1,0 +1,42 @@
+####################################################################################################
+# Code Quality Checking
+####################################################################################################
+quality.format:
+  image: python:latest
+  before_script:
+    - python -m venv /root/venv
+    - source /root/venv/bin/activate
+    - pip install --upgrade pip
+    - pip install flake8
+  script:
+    - source /root/venv/bin/activate
+    - flake8
+
+quality.typecheck:
+  image: python:latest
+  before_script:
+    - python -m venv /root/venv
+    - source /root/venv/bin/activate
+    - pip install --upgrade pip
+    - pip install poetry
+    - pip install mypy
+    - poetry install
+  script:
+    - source /root/venv/bin/activate
+    - mypy .
+
+####################################################################################################
+# Compatibility Checking
+####################################################################################################
+compat.latest:
+  image: python:latest
+  before_script:
+    - python -m venv /root/venv
+    - source /root/venv/bin/activate
+    - pip install --upgrade pip
+    - pip install poetry pytest
+    - poetry install
+  script:
+    - poetry run pytest
+
+

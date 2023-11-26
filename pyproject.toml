@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "bhalu"
+version = "0.1.0"
+description = "A Bearable Package Manager"
+
+authors = [
+  "Jayesh Badwaik <j.badwaik@fz-juelich.de>",
+  "Priyanka Asalkar <asalkar.priyanka13@gmail.com>"
+]
+
+readme = "readme.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+bhalu = 'bhalu.cli:main'
