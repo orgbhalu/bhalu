@@ -1,0 +1,15 @@
+# --------------------------------------------------------------------------------------------------
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (C) 2024 Jayesh Badwaik <j.badwaik@fz-juelich.de>
+# --------------------------------------------------------------------------------------------------
+[package]
+name = "bhalu"
+version = "0.0.0"
+edition = "2021"
+license = "AGPL-3.0-only"
+description = "A Bearable Package Manager"
+repository = "https://github.com/orgbhalu/bhalu"
+documentation = "https://docs.bhalu.dev"
+readme = "readme.md"
+homepage = "https://www.bhalu.dev"
+
